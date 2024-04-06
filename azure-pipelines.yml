@@ -5,5 +5,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, World! $(Build.SourcesDirectory)
+- script: echo Hello, World! $(Build.SourcesDirectory) $(test)
   displayName: 'Print Hello World'
