@@ -6,6 +6,12 @@ pool:
 
 name: $(major).$(minor)$(Rev:.r)
 
+variables:
+  - name: major
+    value: 0
+  - name: minor
+    value: 0
+
 steps:
 - script: echo "The value of test variable is ${{ variables['ganapathy.test'] }}"
   displayName: 'Print Hello World'
