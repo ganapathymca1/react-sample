@@ -5,5 +5,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo "The value of test variable is $(ganapathy.test)"
+- script: echo "The value of test variable is ${{ variables['ganapathy.test'] }}"
   displayName: 'Print Hello World'
