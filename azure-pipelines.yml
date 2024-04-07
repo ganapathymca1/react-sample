@@ -1,12 +1,8 @@
-trigger:
-- main
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-variables:
-- group: ganapathy
+parameters:
+  - name: environment
+    type: string
+    default: 'dev'
 
 steps:
-- script: echo "The value of test variable is $(test)" $(test)
-  displayName: 'Print Test Variable Value'
+  - script: echo "Deploying to $(environment) environment."
+    displayName: 'Deploy to Environment'
