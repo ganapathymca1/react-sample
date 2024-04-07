@@ -10,3 +10,6 @@ variables:
 steps:
 - script: echo "The value of test variable is $(test)" $(test)
   displayName: 'Print Test Variable Value'
+- template: my-template.yml  # Reference the template file
+  parameters:
+    parameter1: 'Hello World'  # Pass parameter with value to the template
