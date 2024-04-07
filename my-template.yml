@@ -6,4 +6,4 @@ parameters:
   type: string  # Specify the data type of the parameter
 
 steps:
-- script: echo $(parameter1)  # Use the parameter value in a script step
+- script: echo "Test message $(parameter1)"  # Use the parameter value in a script step
