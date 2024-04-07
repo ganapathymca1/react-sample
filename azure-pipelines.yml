@@ -4,6 +4,6 @@ pool:
   vmImage: 'ubuntu-latest'  
 
 extends:
-   template: "Entrypoint.yaml"  
+   template: "react-sample/Entrypoint.yaml"  
    parameters:  
        RunChangeLogic: 'true'
