@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+- group: ganapathy
+
 steps:
 - script: echo "The value of test variable is $(test)" $(test)
   displayName: 'Print Test Variable Value'
