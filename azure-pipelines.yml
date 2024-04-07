@@ -1,11 +1,9 @@
+# azure-pipelines.yml
+
 trigger:
-- main
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-variables:
-- group: ganapathy
+  branches:
+    include:
+      - main
 
 jobs:
 - job: Build
