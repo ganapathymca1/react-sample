@@ -1,22 +1,8 @@
 parameters:
-  - name: image
-    type: string
-    default: 'ubuntu-latest'
+  - name: RunChangeLogic  
+    displayName: Run change logic  
+    type: boolean  
+    default: false  
 
-jobs:
-  - job: build
-    pool: ${{ parameters.image }}
-    steps:
-    - task: DownloadBuildArtifacts@0
-      inputs:
-        artifactName: 'drop'
-        downloadPath: '$(System.DefaultWorkingDirectory)'
-
-    - task: DotNetCoreCLI@2
-      inputs:
-        command: 'build'
-
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathtoPublish: '$(System.DefaultWorkingDirectory)/**/*.nupkg'
-        artifactName: 'drop'
+steps:
+- script: echo ${{ parameters.RunChangeLogic }}
