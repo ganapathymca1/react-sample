@@ -4,14 +4,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-name: $(major).$(minor)$(Rev:.r)
-
-variables:
-  - name: major
-    value: 0
-  - name: minor
-    value: 0
-
 steps:
-- script: echo "The value of test variable is ${{ variables['ganapathy.test'] }}"
-  displayName: 'Print Hello World'
+- script: echo "The value of test variable is $(ganapathy.test)"
+  displayName: 'Print Test Variable Value'
