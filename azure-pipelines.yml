@@ -1,8 +1,9 @@
-parameters:
-  - name: RunChangeLogic  
-    displayName: Run change logic  
-    type: boolean  
-    default: false  
+trigger: none  
 
-steps:
-- script: echo ${{ parameters.RunChangeLogic }}
+pool:  
+  vmImage: 'ubuntu-latest'  
+
+extends:
+   template: "YamlTemplates/Stage/Entrypoint.yaml"  
+   parameters:  
+       RunChangeLogic: 'true'
