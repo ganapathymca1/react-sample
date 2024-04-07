@@ -1,0 +1,9 @@
+# my-template.yml
+
+parameters:
+- name: parameter1  # Define parameter in the template file
+  displayName: 'Parameter 1'  # Display name for the parameter
+  type: string  # Specify the data type of the parameter
+
+steps:
+- script: echo $(parameter1)  # Use the parameter value in a script step
