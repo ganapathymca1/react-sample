@@ -13,4 +13,4 @@ jobs:
   steps:
   - template: my-template.yml  # Reference the template file
     parameters:
-      parameter1: 'Hello World'  # Pass parameter with value to the template
+      parameter1: 'Hello World 123'  # Pass parameter with value to the template
