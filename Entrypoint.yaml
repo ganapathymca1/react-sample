@@ -1,0 +1,8 @@
+parameters:
+  - name: RunChangeLogic  
+    displayName: Run change logic  
+    type: boolean  
+    default: false  
+
+steps:
+- script: echo ${{ parameters.RunChangeLogic }}
