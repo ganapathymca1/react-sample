@@ -1,13 +1,16 @@
+# azure-pipelines.yml
 
 trigger:
-- main
+  branches:
+    include:
+      - main
 
-pool:
-  vmImage: 'ubuntu-latest'
-
-variables:
-- group: ganapathy
-
-steps:
-- script: echo "The value of test variable is $(test)" $(test)
-  displayName: 'Print Test Variable Value'
+jobs:
+- job: Build
+  displayName: 'Build Job'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - template: my-template.yml  # Reference the template file
+    parameters:
+      parameter1: 'Hello World'  # Pass parameter with value to the template
