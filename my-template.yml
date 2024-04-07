@@ -7,4 +7,4 @@ parameters:
   default: 'Mama'
 
 steps:
-- script: echo "Test message $(parameter1)"  # Use the parameter value in a script step
+- script: echo "Test message $(parameters.parameter1)"  # Use the parameter value in a script step
