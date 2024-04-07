@@ -1,7 +1,7 @@
 parameters:
   - name: image
     type: string
-    default: ubuntu-latest
+    default: 'ubuntu-latest'
 
 jobs:
   - job: build
