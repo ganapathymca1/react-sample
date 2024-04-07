@@ -10,5 +10,3 @@ jobs:
     vmImage: 'ubuntu-latest'
   steps:
   - template: my-template.yml  # Reference the template file
-    parameters:
-      parameter1:  # Pass parameter with value to the template
