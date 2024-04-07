@@ -4,6 +4,6 @@ pool:
   vmImage: 'ubuntu-latest'  
 
 extends:
-   template: "YamlTemplates/Stage/Entrypoint.yaml"  
+   template: "Entrypoint.yaml"  
    parameters:  
        RunChangeLogic: 'true'
