@@ -2,7 +2,7 @@ parameters:
   - name: RunChangeLogic  
     displayName: Run change logic  
     type: boolean  
-    default: false  
+    default: true  
 
 steps:
 - script: echo ${{ parameters.RunChangeLogic }}
